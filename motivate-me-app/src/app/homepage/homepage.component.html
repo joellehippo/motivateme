@@ -1,6 +1,17 @@
-<p>homepage works!</p>
+<div class="row">
+    <h1 align="center">Motivate Me</h1>
+</div>
 
-<button (click)="AddBook()">Add a book!</button>
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <button class="button_wrapper" (click)="AddBook()">Contribute</button>
+    </div>
+    <div class="col-4"></div>
+
+</div>
+
 
 <ul>
     <li *ngFor="let item of items">
