@@ -124,5 +124,10 @@
       }
     }
   },
-  "defaultProject": "motivate-me-app"
+  "defaultProject": "motivate-me-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "css"
+    }
+  }
 }

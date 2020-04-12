@@ -25,6 +25,7 @@ export class HomepageComponent {
      .subscribe(result => {
        this.items = result;
      })
+     
    }
 
 
