@@ -9,9 +9,16 @@ export class FirebaseService {
     constructor(public db: AngularFirestore) { }
 
 
-    createUser() {
+    addQuote(quote: any, person: any) {
+        
+        const createDt = Date.now();
+        console.log("print: " + quote);
+
         return this.db.collection('quotes').add({
-            name: "something"
+            quote: "test",
+            createDt: createDt
+            // person: person,
+            // createDt: ""
         });
     }
 

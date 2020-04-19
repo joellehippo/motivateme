@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Add your quote!</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>What did they say?</mat-label>
+    <input matInput [(ngModel)]="quote">
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Who said it?</mat-label>
+    <input matInput [(ngModel)]="who">
+</mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="quote" cdkFocusInitial>Ok</button>
+</div>
