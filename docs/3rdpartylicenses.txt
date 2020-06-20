@@ -94,6 +94,10 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/dialog
+
+@angular/material/form-field
+
 @angular/platform-browser
 MIT
 
