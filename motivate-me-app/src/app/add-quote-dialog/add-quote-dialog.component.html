@@ -12,5 +12,6 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Close</button>
-  <button mat-button [mat-dialog-close]="quote" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="[quote,who]" cdkFocusInitial>Ok</button>
+  <!-- <button mat-button (click)="addQuote()" cdkFocusInitial>Ok</button> -->
 </div>

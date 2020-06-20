@@ -37,21 +37,15 @@ export class HomepageComponent {
     });
 
     dialogRef.afterClosed().subscribe(resultQuote => {
-      console.log('The dialog was closed');
-      console.log(resultQuote);
-      this.quote = resultQuote;
-      // this.quote = this.data.quote;
-      // this.who = resultQuote.who;
-      console.log(this.quote);
-      // console.log(this.who);
-      this.triggerAddQuote();
+      this.quote = resultQuote[0];
+      this.who = resultQuote[1];
+      this.triggerAddQuote(this.quote,this.who);
     });
   }
 
 
-  public triggerAddQuote(): void {
-    console.log("adding to firebase db!");
-    this.firebaseService.addQuote(this.quote, this.who);
+  public triggerAddQuote(quote: any, who: any): void {
+    this.firebaseService.addQuote(quote, who);
   }
 
 }
@@ -70,10 +64,14 @@ export class AddQuoteDialogComponent {
    
   constructor(
     public dialogRef: MatDialogRef<AddQuoteDialogComponent>) {}
-
+    
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  // addQuote(): void {
+  //   this.dialogRef.close();
+  // }
 
 }
 

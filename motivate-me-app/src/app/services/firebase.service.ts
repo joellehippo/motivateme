@@ -10,15 +10,16 @@ export class FirebaseService {
 
 
     addQuote(quote: any, person: any) {
-        
+
         const createDt = Date.now();
-        console.log("print: " + quote);
+        console.log("quote: " + quote);
+        console.log("person: " + person);
+        console.log("createDt: " + createDt);
 
         return this.db.collection('quotes').add({
-            quote: "test",
+            quote: quote,
+            person: person,
             createDt: createDt
-            // person: person,
-            // createDt: ""
         });
     }
 
